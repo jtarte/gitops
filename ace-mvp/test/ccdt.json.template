@@ -1,0 +1,24 @@
+{
+    "channel":
+    [
+        {
+            "name": "APPCHL",
+            "clientConnection":
+            {
+                "connection":
+                [
+                    {
+                        "host": "ROUTE",
+                        "port": 443
+                    }
+                ],
+                "queueManager": "BAHBRKP1"
+            },
+            "transmissionSecurity":
+            {
+                "cipherSpecification": "ECDHE_RSA_AES_128_CBC_SHA256"
+            },
+            "type": "clientConnection"
+        }
+    ]
+}
