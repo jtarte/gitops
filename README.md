@@ -43,5 +43,5 @@ In this branch, you could find the files needed for test A.
 
 7. Make a test. From `./ace-mvp/test` directory, use the `mq_init.sh` script to test the connectivity with the platform and the test application flow.
 
-8. on Grafana instance (launched from the Cloud Pak console), you could import the grafana dashboard `./mq-mvp/mq-ace-dashboard.json``
+8. on Grafana instance (launched from the Cloud Pak console), you could import the grafana dashboard `./mq-mvp/mq-ace-dashboard.json`
 
