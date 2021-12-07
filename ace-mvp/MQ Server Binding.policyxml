@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policies>
+    <policy policyType="MQEndpoint" policyName="MQ Server Binding" policyTemplate="MQEndpoint">
+        <connection>CLIENT</connection>
+        <destinationQueueManagerName>BAHBRKP1</destinationQueueManagerName>
+        <queueManagerHostname>bahbrkp1-ibm-mq</queueManagerHostname>
+        <listenerPortNumber>1414</listenerPortNumber>
+        <channelName>SVR.CONN</channelName>
+        <CCDTUrl></CCDTUrl>
+        <securityIdentity></securityIdentity>
+        <useSSL>false</useSSL>
+        <SSLPeerName></SSLPeerName>
+        <SSLCipherSpec></SSLCipherSpec>
+        <SSLCertificateLabel></SSLCertificateLabel>
+        <MQApplName></MQApplName>
+        <reconnectOption>default</reconnectOption>
+    </policy>
+</policies>

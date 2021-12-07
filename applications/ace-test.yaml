@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ace-test
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: mvp
+    server: https://kubernetes.default.svc
+  project: cp4i
+  source:
+    path: ace-mvp
+    repoURL: https://github.com/jtarte/gitops
+    targetRevision: test-a
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
