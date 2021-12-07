@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: cp4i
+  namespace: openshift-gitops
+spec:
+  generators:
+    - git:
+        directories:
+        - path: cp4i/*
+        repoURL: 'https://github.com/jtarte/gitops'
+        revision: test-a
+  template:
+    metadata:
+      name: '{{path.basename}}'
+    spec:
+      destination:
+        namespace: cp4i
+        server: 'https://kubernetes.default.svc'
+      project: cp4i
+      source:
+        path: '{{path}}'
+        repoURL: 'https://github.com/jtarte/gitops'
+        targetRevision: test-a
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true

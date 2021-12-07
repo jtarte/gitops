@@ -1,0 +1,11 @@
+apiVersion: core.automation.ibm.com/v1beta1
+kind: AutomationUIConfig
+metadata:
+  name: iaf-system
+  namespace: cp4i
+spec:
+  license:
+    accept: true
+  tls: {}
+  version: 1.2.0
+  zen: false

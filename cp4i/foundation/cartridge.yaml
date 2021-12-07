@@ -1,0 +1,10 @@
+apiVersion: core.automation.ibm.com/v1beta1
+kind: Cartridge
+metadata:
+  name: integration
+  namespace: cp4i
+spec:
+  description: IBM Cloud Pak for Integration
+  license:
+    accept: true
+  version: 1.2.0
