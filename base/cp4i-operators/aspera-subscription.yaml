@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: aspera-hsts-operator
+  namespace: openshift-operators
+  labels:
+    operators.coreos.com/aspera-hsts-operator.openshift-operators: ''
+spec:
+  channel: v1.3
+  installPlanApproval: Automatic
+  name: aspera-hsts-operator
+  source: ibm-operator-catalog
+  sourceNamespace: openshift-marketplace
