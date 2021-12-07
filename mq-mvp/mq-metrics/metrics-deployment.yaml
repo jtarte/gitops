@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mq-metrics-dep
+  labels:
+    app: mq-metrics-prometheus-app
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: mq-metric-prometheus-app
+  template:
+    metadata:
+      labels:
+        app: mq-metric-prometheus-app
+    spec:
+      containers:
+        - name: mq-metric-prometheus
+          image: jtarte/mq-metric-prometheus:5.2.3
+          imagePullPolicy: "Always"
+          envFrom:
+          - configMapRef:
+              name: metrics-configuration
+          - secretRef:
+              name: metrics-credentials

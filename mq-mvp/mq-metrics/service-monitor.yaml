@@ -1,0 +1,17 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    k8s-app: prometheus-example-monitor
+  name: mq-additonal-metrics
+spec:
+  endpoints:
+    - interval: 30s
+      port: metrics
+      scheme: http
+  namespaceSelector:
+    matchNames:
+      - mvp
+  selector:
+    matchLabels:
+      app: mq-metric-prometheus

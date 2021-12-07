@@ -1,0 +1,13 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: default-mq-mvp-route
+spec:
+  host: appchl.chl.mq.ibm.com
+  to:
+    kind: Service
+    name: bahbrkp1-ibm-mq
+  port:
+    targetPort: 1414
+  tls:
+    termination: passthrough

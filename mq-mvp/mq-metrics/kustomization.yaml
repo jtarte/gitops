@@ -1,0 +1,8 @@
+resources:
+- gitops-rolebinding.yaml
+- metrics-cm.yaml
+- metrics-secret.yaml
+- metrics-service.yaml
+- sa-pod-deployer.yaml
+- service-monitor.yaml
+- metrics-deployment.yaml
