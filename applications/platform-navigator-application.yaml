@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: platform-navigator
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: cp4i
+    server: https://kubernetes.default.svc
+  project: cp4i
+  source:
+    path: ace-mvp
+    repoURL: https://github.com/jtarte/gitops
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

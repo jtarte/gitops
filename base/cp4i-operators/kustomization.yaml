@@ -1,0 +1,7 @@
+resources:
+- mq-subscription.yaml
+- automation-core.yaml
+- app-connect-subscription.yaml 
+- navigator-subscription.yaml
+
+

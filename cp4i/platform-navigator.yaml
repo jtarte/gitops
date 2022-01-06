@@ -1,0 +1,17 @@
+apiVersion: integration.ibm.com/v1beta1
+kind: PlatformNavigator
+metadata:
+    name: integration-navigator
+    namespace: cp4i
+spec:
+  license:
+    accept: true
+    license: L-RJON-C7QG3S
+  mqDashboard: true
+  replicas: 1
+  storage:
+    class: ocs-storagecluster-cephfs
+  version: 2021.4.1
+  requestIbmServices:
+        monitoring: true
+        licensing: true
