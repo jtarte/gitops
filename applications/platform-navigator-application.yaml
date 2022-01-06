@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: cp4i
   source:
-    path: ace-mvp
+    path: cp4i
     repoURL: https://github.com/jtarte/gitops
     targetRevision: main
   syncPolicy:
