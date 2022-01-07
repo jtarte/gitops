@@ -1,3 +1,4 @@
 resources:
 - namespace.yaml
-- platform-navigator.yaml
+# - platform-navigator.yaml
+- secret.yaml
