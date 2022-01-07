@@ -3,6 +3,8 @@ kind: PlatformNavigator
 metadata:
     name: integration-navigator
     namespace: cp4i
+    annotations:
+      argocd.argoproj.io/sync-wave: "20"
 spec:
   license:
     accept: true
