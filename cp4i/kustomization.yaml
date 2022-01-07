@@ -1,4 +1,4 @@
 resources:
 - namespace.yaml
 - platform-navigator.yaml
-- secret.yaml
+- set-ibm-entitlement.yaml
