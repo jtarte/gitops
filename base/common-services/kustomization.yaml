@@ -1,3 +1,4 @@
 resources:
 - operand.yaml
 - check.yaml
+- check-sa.yaml
