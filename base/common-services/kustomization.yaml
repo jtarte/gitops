@@ -1,2 +1,3 @@
 resources:
 - operand.yaml
+- check.yaml
