@@ -9,7 +9,7 @@ spec:
         directories:
         - path: base/*
         repoURL: 'https://github.com/jtarte/gitops'
-        revision: test-a
+        revision: gitops-test-b
   template:
     metadata:
       name: '{{path.basename}}'
@@ -21,7 +21,7 @@ spec:
       source:
         path: '{{path}}'
         repoURL: 'https://github.com/jtarte/gitops'
-        targetRevision: test-a
+        targetRevision: gitops-test-b
       syncPolicy:
         automated:
           prune: true
