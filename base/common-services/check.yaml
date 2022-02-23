@@ -44,17 +44,3 @@ spec:
       dnsPolicy: ClusterFirst
       securityContext: {}
       schedulerName: default-scheduler
---- 
-kind: RoleBinding
-apiVersion: rbac.authorization.k8s.io/v1
-metadata:
-  name: checker-binding
-  namespace: ibm-common-services
-subjects:
-  - kind: ServiceAccount
-    name: checker
-    namespace: ibm-common-services
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: admin
