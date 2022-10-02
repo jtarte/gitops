@@ -17,7 +17,7 @@ spec:
         items:
         - bahbrkp1.mqsc
     storage:
-      defaultClass: managed-premium
+      defaultClass: ibmc-vpc-block-10iops-tier
       queueManager:
         type: persistent-claim
   template:
