@@ -1,0 +1,5 @@
+resources:
+- operand.yaml
+- check.yaml
+- check-sa.yaml
+- check-rb.yaml

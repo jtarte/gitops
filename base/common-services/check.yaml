@@ -1,0 +1,46 @@
+kind: Job
+apiVersion: batch/v1
+metadata:
+  name: check-common-services-2
+  namespace: ibm-common-services
+  labels:
+    job-name: check-common-services-2
+spec:
+  parallelism: 1
+  completions: 1
+  backoffLimit: 4
+  template:
+    metadata:
+      labels:
+        job-name: check-common-services-2
+        app.kubernetes.io/part-of: cp4i-base
+    spec:
+      serviceAccountName: checker
+      containers:
+        - name: checker-oc
+          image: 'quay.io/openshift/origin-cli:4.6.0'
+          command:
+            - /bin/bash 
+            - '-c'
+            - | 
+              sleep 300
+              echo "start"
+              n=$(oc get pods -n ibm-common-services --no-headers | grep -Ev 'Running|Completed'| wc -l)
+              echo "boucle"
+              echo $n
+              while ((n > 0))
+              do
+                echo "Cloud Pak Foundational Services not yet installed"
+                sleep 30
+                n=$(oc get pods -n ibm-common-services --no-headers | grep -Ev 'Running|Completed' | wc -l)
+              done
+              echo "Cloud Pak Foundational Services installed"
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Never
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
