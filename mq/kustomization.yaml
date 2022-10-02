@@ -4,3 +4,4 @@ resources:
 - mq-mvp-cm.yaml
 #- mq-mvp-route.yaml
 - mq-mvp-instance.yaml
+- set-ibm-entitlement.yaml
