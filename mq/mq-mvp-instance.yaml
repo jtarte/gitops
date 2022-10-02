@@ -1,0 +1,42 @@
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  name: bahbrkp1
+spec:
+  license:
+    accept: true
+    license: L-RJON-BXUPZ2
+    use: NonProduction
+  queueManager:
+    name: BAHBRKP1
+    availability:
+      type: NativeHA
+    mqsc:
+    - configMap:
+        name: mq-mvp-configmap
+        items:
+        - bahbrkp1.mqsc
+    storage:
+      defaultClass: managed-premium
+      queueManager:
+        type: persistent-claim
+  template:
+    pod:
+      containers:
+        - env:
+            - name: MQSNOAUT
+              value: 'yes'
+          name: qmgr
+  version: 9.2.3.0-r1
+  web:
+    enabled: false
+  pki:
+    keys:
+      - name: default
+        secret:
+          secretName: mq-mvp-instance-tls
+          items: 
+          - tls.key
+          - tls.crt
+          - ca.crt 
+          
