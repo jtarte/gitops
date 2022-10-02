@@ -1,6 +1,6 @@
 resources:
 - mq-mvp-namespace.yaml 
-- mq-mvp-certificate.yaml
+#- mq-mvp-certificate.yaml
 - mq-mvp-cm.yaml
 #- mq-mvp-route.yaml
 - mq-mvp-instance.yaml

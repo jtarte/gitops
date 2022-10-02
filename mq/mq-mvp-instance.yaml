@@ -29,14 +29,4 @@ spec:
           name: qmgr
   version: 9.2.3.0-r1
   web:
-    enabled: false
-  pki:
-    keys:
-      - name: default
-        secret:
-          secretName: mq-mvp-instance-tls
-          items: 
-          - tls.key
-          - tls.crt
-          - ca.crt 
-          
+    enabled: false       
