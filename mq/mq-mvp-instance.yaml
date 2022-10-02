@@ -2,6 +2,8 @@ apiVersion: mq.ibm.com/v1beta1
 kind: QueueManager
 metadata:
   name: bahbrkp1
+  annotations:
+    argocd.argoproj.io/sync-wave: "30"
 spec:
   license:
     accept: true
