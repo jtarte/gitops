@@ -6,7 +6,7 @@ metadata:
   labels:
     operators.coreos.com/ibm-integration-platform-navigator.openshift-operators: ''
 spec:
-  channel: v5.2
+  channel: v6.0
   installPlanApproval: Automatic
   name: ibm-integration-platform-navigator
   source: ibm-operator-catalog

@@ -6,7 +6,7 @@ metadata:
   labels:
     operators.coreos.com/datapower-operator.openshift-operators: ''
 spec:
-  channel: v1.5
+  channel: v1.6
   installPlanApproval: Automatic
   name: datapower-operator
   source: ibm-operator-catalog

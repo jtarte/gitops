@@ -6,7 +6,7 @@ metadata:
   labels:
     operators.coreos.com/aspera-hsts-operator.openshift-operators: ''
 spec:
-  channel: v1.4
+  channel: v1.5
   installPlanApproval: Automatic
   name: aspera-hsts-operator
   source: ibm-operator-catalog

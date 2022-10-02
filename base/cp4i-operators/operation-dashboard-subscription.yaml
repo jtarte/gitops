@@ -6,7 +6,7 @@ metadata:
   labels:
     operators.coreos.com/ibm-integration-operations-dashboard.openshift-operators: ''
 spec:
-  channel: v2.5
+  channel: v2.6-lts
   installPlanApproval: Automatic
   name: ibm-integration-operations-dashboard
   source: ibm-operator-catalog

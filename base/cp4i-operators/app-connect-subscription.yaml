@@ -6,7 +6,7 @@ metadata:
   labels:
     operators.coreos.com/ibm-appconnect.openshift-operators: ''
 spec:
-  channel: v3.0
+  channel: v6.0
   installPlanApproval: Automatic
   name: ibm-appconnect
   source: ibm-operator-catalog

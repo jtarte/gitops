@@ -6,7 +6,7 @@ metadata:
   labels:
     operators.coreos.com/ibm-mq.openshift-operators: ''
 spec:
-  channel: v1.7
+  channel: v2.0
   installPlanApproval: Automatic
   name: ibm-mq
   source: ibm-operator-catalog
